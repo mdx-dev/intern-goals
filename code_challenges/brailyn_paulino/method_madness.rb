@@ -66,18 +66,33 @@ end
 
 # Write a method, single_counter, that returns the number of singles for a given Wu-Tang album.
 def single_counter
-    wu_tang[0][:singles].count 
+  wu_tang[0][:singles].count 
 end
+
 # Write a method, album length, that returns an album's play time.
 def album_length
+  wu_tang[0][:length]
+end
 # Write a method, singlegram, that returns a hash of the single count for the Wu-Tang discography, like so:
 {
 "Enter the Wu Tang" => 4,
 "Wu-Tang Forever" => 3,
 }
 def singlegram
+  single_hash = {}
+  wu_tang.each | word | do
+  single_hash[word[:title]] = word[:singles].count
+  end
+  single_hash
+end
 
 
 
 # Write a method, wu-marathon, that returns the total playtime of all the Wu-Tang albums combined.
 def wu_marathon
+  counter = 0
+  wu_tang.each | word | do
+    counter += wu_tang[:length].gsub(":00","").to_i
+  end
+  counter
+end
