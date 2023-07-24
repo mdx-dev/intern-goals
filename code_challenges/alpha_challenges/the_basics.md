@@ -13,7 +13,8 @@ a = b
 At the end of this program, what are the values of a and b? Try to explain, in plain English, how you got your answer for each one.
 
 **Answer 1:**
-
+a is 4 and b is 4
+Code reads from top to bottom, since a is being assigned to the value b at the end of the code. Then variable a is 4 which is what the value of b is as well.
 
 ## Question 2
 
@@ -28,7 +29,8 @@ e = 3
 At the end of this program, what are the values of e, f, and g? Try to explain, in plain English, how you got your answer for each one.
 
 **Answer 2:**
-
+e is 3, f is 9, and g is 12
+<!-- e was originally 3 and was reassigned to 3 again. f was 9 but reassigned to the value of g which is 12. Since g is 12 because e from the first line was 3 and f was 9 equals to 12. -->
 
 ## Question 3
 
@@ -40,7 +42,7 @@ weather == "cloudy"
 What is the difference between these two statements? Explain your answer.
 
 **Answer 3:**
-
+One is the assignment operator, while the second one is the comparison operator because on line 38 it is assigning the variable weather to a string called cloudy, while the line 39 is only comparing weather to a string called "cloudy".
 
 ## Question 4
 
@@ -59,7 +61,10 @@ Imagine that you take the code from this question, save it to a file called `sus
 What would be the output? Explain your answer.
 
 **Answer 4:**
+The output would be 
+- sushi is delicious
 
+because the if statement is false, variable x does not equal 3, then elsif is next which is a true statement and the string will be displayed in the output
 
 ## Question 5
 
@@ -74,7 +79,10 @@ end
 If you ran this code, what would be the output? Explain your answer.
 
 **Answer 5:**
+the output would be
+- I'm allergic!
 
+Since its double equal signs it must have the same variable type and value, so I believe the statement returns true.
 
 ## Question 6
 
@@ -85,7 +93,8 @@ If you ran this code, what would be the output? Explain your answer.
 What would happen here and why? How should I change this code to get an output of 14?
 
 **Answer 6:**
-
+A syntax error will occur because a string and a integer is not the same type of variable to be added together.
+By Removing the qoutes on the 4 to make it a integer instead to get a output of 14.
 
 ## Question 7
 
@@ -96,7 +105,7 @@ What would happen here and why? How should I change this code to get an output o
 What is the index value of "Michelangelo"?
 
 **Answer 7:**
-
+Index value is 2
 
 ## Questions 8
 
@@ -109,6 +118,8 @@ What is the index value of "Michelangelo"?
 **Answer 8A:**
 ```ruby
 # write your code here
+jurassic_park["Triceratops"]
+jurassic_park.fetch("Triceratops", "Hello")
 ```
 
 * In Ruby, write code to add "Dr. Satler" to the "Humans" of `jurassic_park`.
@@ -116,6 +127,9 @@ What is the index value of "Michelangelo"?
 **Answer 8B:**
 ```ruby
 # write your code here
+jurassic_park["Humans"] << "Dr. Satler"
+jurassic_park["Humans"].insert(3, "Dr. Satler")
+jurassic_park["Humans"].push("Dr.Sather")
 ```
 
 ## Question 9
@@ -135,7 +149,8 @@ end
 * What do you expect the outcome will be? Explain your answer.
 
 **Answer 9:**
-
+The expected outcome would be an error because there is no index of 4 in that array.
+Since x equals 0, the code will run 4 times because its adding 1 to the variable after the statement is done. 
 
 ## Question 11
 
@@ -145,7 +160,9 @@ end
 ```ruby
 def names
   # write your code in here
+  ["Brailyn", "Paulino"]
 end
+
 ```
 
 ## Question 12
@@ -155,4 +172,7 @@ end
 **Answer 12:**
 ```ruby
 # write your code here
+def caps(str)
+  str.upcase
+end
 ```

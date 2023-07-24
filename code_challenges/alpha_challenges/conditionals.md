@@ -9,6 +9,15 @@ Chartreuse is my favorite color. Magenta is my second favorite. Periwinkle is my
 color = "Magenta"
 
 # write your code here
+if color == "Chartreuse"
+  puts "This is my favorite color!"
+elsif color == "Magenta"
+  puts "This is my second favorite color!"
+elsif color == "Periwinkle"
+  puts "This is my least favorite color but atleast it is not something other than my top 3!"
+else
+  puts "I hate it!"
+end
 ```
 
 Now, turn your color conditional into a method called `color_checker` that takes any color as an argument.
@@ -16,7 +25,18 @@ Now, turn your color conditional into a method called `color_checker` that takes
 ```ruby
 def color_checker(color)
   # write your code here
+  if color == "Chartreuse"
+    puts "This is my favorite color!"
+  elsif color == "Magenta"
+    puts "This is my second favorite color!"
+  elsif color == "Periwinkle"
+    puts "This is my least favorite color but atleast it is not something other than my top 3!"
+  else
+    puts "I hate it!"
+  end
 end
+
+
 ```
 
 ## Conditioner Conditional
@@ -28,7 +48,17 @@ Create a Ruby method called `temperature_status` that takes three arguments: the
 
 ```ruby
 # write your code here
+def temperature_status(current, condition, desired)
+  if condition == true && current > desired
+    puts "Turn on the A/C, please."
+  elsif condition == false && current > desired
+    puts "Fix the A/C now! It's hot!"
+  elsif condition == false && current < desired
+    puts "Fix the A/C whenever you have the chance. It's cool."
+  end
+end
 ```
+
 
 ## Palindrome Checker
 
@@ -36,4 +66,12 @@ Create a Ruby method that takes a word or phrase and checks whether or not it's 
 
 ```ruby
 # write your code here
+def palidromeChecker(word)
+if word == word.reverse()
+    puts "It is a Palidrome!"
+  else
+    puts "It is not a Palidrome."
+  end
+end
+
 ```

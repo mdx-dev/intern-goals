@@ -20,12 +20,37 @@ Programmatically manipulate `iverson_rant` to reflect the output above.
 
 ```ruby
 # write your code here
+iverson_rant = "If I can't practice, I can't practice, man. If I'm hurt, I'm hurt. I mean simple as that. It ain't about that. I mean it's, it's not about that at all. You know what I'm saying. I mean, but it's, it's easy to, to talk about. It's easy to sum it up when you're just talking about practice. We're sitting in here, and I'm supposed to be the franchise player, and we in here talking about practice. I mean, listen, we're talking about practice, not a game, not a game, not a game, we talking about practice. Not a game. Not, not. Not the game that I go out there and die for and play every game like it's my last. Not the game, but we're talking about practice, man. I mean, how silly is that? And we talking about practice. I know I'm supposed to be there. I know I'm supposed to lead by example. I know that, and I'm not, I'm not shoving it aside, you know, like it don't mean anything. I know it's important, I do. I honestly do. But we're talking about practice, man. What are we talking about? We're talking about practice, man."
+
+iverson = iverson_rant.split
+
+# x = 0
+# while x < iverson.length
+#   print iverson[x].chars[0]
+#   x += 1
+# end
+
+
+iver = iverson.map | word | do 
+  word[0]
+end
+puts iver.join
+
+
 ```
 
 2. Programmatically find out exactly how many times Iverson used the word 'practice' in his rant.
 
 ```ruby
 # write your code here
+iverson_rant = "If I can't practice, I can't practice, man. If I'm hurt, I'm hurt. I mean simple as that. It ain't about that. I mean it's, it's not about that at all. You know what I'm saying. I mean, but it's, it's easy to, to talk about. It's easy to sum it up when you're just talking about practice. We're sitting in here, and I'm supposed to be the franchise player, and we in here talking about practice. I mean, listen, we're talking about practice, not a game, not a game, not a game, we talking about practice. Not a game. Not, not. Not the game that I go out there and die for and play every game like it's my last. Not the game, but we're talking about practice, man. I mean, how silly is that? And we talking about practice. I know I'm supposed to be there. I know I'm supposed to lead by example. I know that, and I'm not, I'm not shoving it aside, you know, like it don't mean anything. I know it's important, I do. I honestly do. But we're talking about practice, man. What are we talking about? We're talking about practice, man."
+
+iverson = iverson_rant.split
+count = 0
+iverson.each do |word| if word.include? "practice"
+  count += 1
+  puts count
+end
 ```
 
 ## Green Eggs and Ham
@@ -45,4 +70,13 @@ Hint: You can chain substitutions!
 
 ```ruby
 # write your code here
+sam_i_am = "I am Sam\nSam I am\nThat Sam-I-am!\nThat Sam-I-am!\nI do not like that Sam-I-am!\nDo you like green eggs and ham?\nI do not like them, Sam-I-am.\nI do not like\ngreen eggs and ham."
+
+sam = sam_iam.gsub(" ","_")
+sam = sam_iam.gsub("\n","*")
+sam2 = sam.gsub("Sam","Brailyn")
+sam2 = sam2.gsub("o","0")
+sam3 = sam2.gsub("green","blue")
+
+print sam3
 ```

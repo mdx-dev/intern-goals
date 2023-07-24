@@ -1,6 +1,9 @@
-# Method Man's Method Madness
+# - Write code to programmatically print "Protect Ya Neck" to the screen.
+# - Write code to programmatically print the word "RCA" to the screen.
+# - Write code to programmatically print "Iron Flag" to the screen.
+# - Change the label for "Wu-Tang Forever" to "Sony".
+# - Add the single "Out of the Woods" to the album "Eight Diagrams"
 
-```ruby
 wu_tang = [
   {
     :title => "Enter the Wu Tang",
@@ -38,33 +41,56 @@ wu_tang = [
     :length => "71:00",
   }
 ]
-```
 
-Method Man wants to dive into the Wu-Tang catalog and extract some sweet information from it. Let's give him a hand. Touch a file called `method_madness.rb` and create the following methods.
+print "Protect Ya Neck"
+print "RCA"
+print "Iron Flag"
 
-## Warm Up!
+wu_tang.each | word | do
+  if word[:title] == "Wu-Tang Forever"
+    word[:title] = "Sony"
+  end
+end
 
-- Write code to programmatically print "Protect Ya Neck" to the screen.
-- Write code to programmatically print the word "RCA" to the screen.
-- Write code to programmatically print "Iron Flag" to the screen.
-- Change the label for "Wu-Tang Forever" to "Sony".
-- Add the single "Out of the Woods" to the album "Eight Diagrams"
 
-## Real Deal
 
-1. Write a method, `single_sampler`, that takes a Wu-Tang album hash and prints out the names of all the singles.
+# Real Deal
+# Write a method, single_sampler, that takes a Wu-Tang album hash and prints out the names of all the singles.
+def single_sampler
+  wu_tang.each | word | do
+    word[:singles].each | name | do
+      puts name
+    end
+  end
+end
 
-2. Write a method, `single_counter`, that returns the number of singles for a given Wu-Tang album.
+# Write a method, single_counter, that returns the number of singles for a given Wu-Tang album.
+def single_counter
+  wu_tang[0][:singles].count 
+end
 
-3. Write a method, `album length`, that returns an album's play time.
-
-4. Write a method, `singlegram`, that returns a hash of the single count for the Wu-Tang discography, like so:
-
-```ruby
-  {
-    "Enter the Wu Tang" => 4,
-    "Wu-Tang Forever" => 3,
-  }
-```
-
-5. Write a method, `wu-marathon`, that returns the total playtime of all the Wu-Tang albums combined.
+# Write a method, album length, that returns an album's play time.
+def album_length
+  wu_tang[0][:length]
+end
+# Write a method, singlegram, that returns a hash of the single count for the Wu-Tang discography, like so:
+{
+  "Enter the Wu Tang" => 4,
+  "Wu-Tang Forever" => 3,
+}
+def singlegram
+  single_hash = {}
+  wu_tang.each | word | do
+    single_hash[word[:title]] = word[:singles].count
+  end
+    single_hash
+end
+  
+  # Write a method, wu-marathon, that returns the total playtime of all the Wu-Tang albums combined.
+def wu_marathon
+  counter = 0
+  wu_tang.each | word | do
+    counter += wu_tang[:length].gsub(":00","").to_i
+  end
+    counter
+end
