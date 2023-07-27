@@ -50,7 +50,11 @@ count = 0
 iverson.each do |word| if word.include? "practice"
   count += 1
   puts count
+  end
+
 end
+
+
 ```
 
 ## Green Eggs and Ham
@@ -72,6 +76,15 @@ Hint: You can chain substitutions!
 # write your code here
 sam_i_am = "I am Sam\nSam I am\nThat Sam-I-am!\nThat Sam-I-am!\nI do not like that Sam-I-am!\nDo you like green eggs and ham?\nI do not like them, Sam-I-am.\nI do not like\ngreen eggs and ham."
 
+# sam = sam_iam.split(" ").join("_")
+# sam = sam_i_am.split("\n").join("*")
+
+# sam2 = sam.split("Sam").join("Brailyn")
+# sam2 = sam2.split("o").join("0")
+
+# sam3 = sam2.split("green").join("blue")
+# print sam3
+
 sam = sam_iam.gsub(" ","_")
 sam = sam_iam.gsub("\n","*")
 sam2 = sam.gsub("Sam","Brailyn")
@@ -79,4 +92,5 @@ sam2 = sam2.gsub("o","0")
 sam3 = sam2.gsub("green","blue")
 
 print sam3
+
 ```

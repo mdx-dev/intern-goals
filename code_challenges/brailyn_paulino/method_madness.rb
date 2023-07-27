@@ -75,22 +75,24 @@ def album_length
 end
 # Write a method, singlegram, that returns a hash of the single count for the Wu-Tang discography, like so:
 {
-  "Enter the Wu Tang" => 4,
-  "Wu-Tang Forever" => 3,
+"Enter the Wu Tang" => 4,
+"Wu-Tang Forever" => 3,
 }
 def singlegram
   single_hash = {}
   wu_tang.each | word | do
-    single_hash[word[:title]] = word[:singles].count
+  single_hash[word[:title]] = word[:singles].count
   end
-    single_hash
+  single_hash
 end
-  
-  # Write a method, wu-marathon, that returns the total playtime of all the Wu-Tang albums combined.
+
+
+
+# Write a method, wu-marathon, that returns the total playtime of all the Wu-Tang albums combined.
 def wu_marathon
   counter = 0
   wu_tang.each | word | do
     counter += wu_tang[:length].gsub(":00","").to_i
   end
-    counter
+  counter
 end

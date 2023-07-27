@@ -67,7 +67,8 @@ Create a Ruby method that takes a word or phrase and checks whether or not it's 
 ```ruby
 # write your code here
 def palidromeChecker(word)
-if word == word.reverse()
+
+  if word == word.reverse()
     puts "It is a Palidrome!"
   else
     puts "It is not a Palidrome."

@@ -160,7 +160,7 @@ Since x equals 0, the code will run 4 times because its adding 1 to the variable
 ```ruby
 def names
   # write your code in here
-  ["Brailyn", "Paulino"]
+  arr = ["Brailyn", "Paulino"]
 end
 
 ```
