@@ -27,7 +27,6 @@ for (let key of kanyeRecords) {
   console.log(`${key.title}` + " was released in " + `${key.year}` + ".")
 }
 
-
 // Iterate through the collection. Replace the letter 'o' in each record title with the number 0, and then print out the title.
 for (let key of kanyeRecords) {
   let new_record = key.title.replaceAll("o", "0")
